@@ -20,22 +20,30 @@ function App() {
     const newList = list.filter((todo) => todo.id !== id);
     setList(newList);
   }
-
   return (
     <div>
+
       <h1>Túdo.vapp</h1>
-      <input type="text" value={input} onChange={(e) => setInput(e.target.value)}/>
-      <button onClick={() => addTodo(input)}>+</button>
-      <ul>
+        <div name="search">
+          <input className='input' placeholder='O quê eu ia fazer mesmo?' value={input} onChange={(e) => setInput(e.target.value)}/>
+          <button className='btn-add' onClick={() => addTodo(input)}>+</button>
+      </div>
+      <div class="container">
         {list.map((todo) => (
-          <li key={todo.id}>
-            {todo.todo}
-            <button onClick={() => deleteTodo(todo.id)}>&times;</button>
-          </li>
+          <div class="item">
+            <tr>
+            <th><button class="btn-ok" onClick={() => deleteTodo(todo.id)}></button></th>
+            <td class="todo-text"><li key={todo.id}>{todo.todo}</li></td>
+            <td><button class="btn-remove" onClick={() => deleteTodo(todo.id)}>&times;</button></td>
+            </tr>
+          </div>
         ))}
-      </ul>
-    </div>
+      </div>
+      </div>
+
+      
   )
+
 }
 
 export default App
