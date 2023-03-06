@@ -12,7 +12,7 @@ li{
   list-style-type: none;
 }
 h1{
-  color: rgb(71, 71, 71);
+  color: rgb(100, 100, 100);
 }
 
 tr, td{
@@ -92,6 +92,7 @@ input{
   height: 50px;
   text-align: center;
   background-color: transparent;
+  margin-left: 1.6%;
 }
 
 textarea:focus, input:focus{

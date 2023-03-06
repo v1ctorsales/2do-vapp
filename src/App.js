@@ -5,12 +5,12 @@ function App() {
   const [list, setList, , oklist , setListOk] = useState([]);
   const [input, setInput] = useState("");
 
-  const addTodo= (todo) => {  
+  const addTodo = (todo)=> {  
+
     const newTodo = {
       id: Math.random(),
       todo: todo,
     };
-
     setList([...list, newTodo])
     setListOk([oklist, newTodo])
 
@@ -18,10 +18,10 @@ function App() {
   };
 
   const deleteTodo = (id) =>{
+
     const newList = list.filter((todo) => todo.id !== id);
     setList(newList);
   }
-
   const concluiTodo = (id) =>{
     alert(id+" criar conclusao do todo")
   }
@@ -29,7 +29,7 @@ function App() {
     <div>
       <h1>Túdo.vapp</h1>
         <div name="search">
-          <input className='input' placeholder='O quê eu ia fazer mesmo?' value={input} onChange={(e) => setInput(e.target.value)}/>
+          <input type="" placeholder='O quê eu ia fazer mesmo?' value={input} onChange={(e) => setInput(e.target.value)} />
           <button className='btn-add' onClick={() => addTodo(input)}>+</button>
       </div>
       <div class="container">
