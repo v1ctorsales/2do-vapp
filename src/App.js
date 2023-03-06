@@ -12,7 +12,6 @@ function App() {
       todo: todo,
     };
     setList([...list, newTodo])
-    setListOk([oklist, newTodo])
 
     setInput("");
   };
@@ -22,9 +21,31 @@ function App() {
     const newList = list.filter((todo) => todo.id !== id);
     setList(newList);
   }
-  const concluiTodo = (id) =>{
-    alert(id+" criar conclusao do todo")
+  const concluiTodo = (id, todo) =>{
+    
+    //var controle = 0;
+
+    //document.querySelector(".item2").classList.add("visivel");
+    //var newid = id +1;
+    //console.log(id)
+
+   // id.deleteTodo();
+
+
+    //const concList = oklist.filter((todo) => todo.id > 1);
+    //setList(concList);
+
+    //setInput("");
+
+   // controle++;
   }
+
+
+
+const bazuka = () =>{
+
+
+}
   return (
     <div>
       <h1>Túdo.vapp</h1>
@@ -43,11 +64,29 @@ function App() {
           </div>
         ))}
       </div>
+      <div class="container2" id="ctn2">
+      {list.map((todo) => ( 
+      <div class="item2">
+        <tr>
+        <th><button class="none"></button></th>
+        <td class="todo-text"><li key={todo.newid}>{todo.todo}</li></td>
+        <td><button class="btn-remove" onClick={() => deleteTodo(todo.id)}>&times;</button></td>
+        </tr>
+      </div>
+      ))}
+      </div>
+      
+      <script>
+      </script>
       </div>// Preciso criar uma lista secundaria para os items concluidos
 
-      
+        
   )
 
+
+  
 }
+
+
 
 export default App 

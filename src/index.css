@@ -29,12 +29,20 @@ td, th {
   font-size: 200px;
 }
 
-.container{
+.container, .container2{
 display: grid;
 margin: 20px auto;
 background-color: rgb(243, 243, 243);
 width: 50%;
 border-radius: 25px;
+}
+
+.item2{
+  display: none;
+}
+
+.visivel{
+  display: grid;
 }
 
 .item:nth-child(even) {
@@ -80,6 +88,15 @@ input:focus::placeholder {
 .btn-ok{
   border-radius: 50px;
   border: 2px solid rgb(5, 182, 5);
+  margin-left:10px;
+  height: 20px;
+  width: 80%;
+}
+
+.none{
+  border-radius: 50px;
+  border: 2px solid rgba(255, 255, 255, 0);
+  background-color: #e9e9e900;
   margin-left:10px;
   height: 20px;
   width: 80%;
