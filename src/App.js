@@ -1,11 +1,15 @@
 import React, {useState} from 'react'
 
+  var controle = 0;
+
 function App() {
+
 
   const [list, setList, , oklist , setListOk] = useState([]);
   const [input, setInput] = useState("");
 
   const addTodo = (todo)=> {  
+    
 
     const newTodo = {
       id: Math.random(),
@@ -14,6 +18,8 @@ function App() {
     setList([...list, newTodo])
 
     setInput("");
+
+    controle++;
   };
 
   const deleteTodo = (id) =>{
@@ -22,10 +28,14 @@ function App() {
     setList(newList);
   }
   const concluiTodo = (id, todo) =>{
-    
-    //var controle = 0;
 
-    //document.querySelector(".item2").classList.add("visivel");
+    alert(id);
+
+    var newitem = list.filter(id)
+    if(newitem){
+      document.querySelectorAll(".item2")[0].classList.add("visivel");
+    }
+    document.querySelectorAll(".item2")[id].classList.add("visivel");
     //var newid = id +1;
     //console.log(id)
 
@@ -37,7 +47,7 @@ function App() {
 
     //setInput("");
 
-   // controle++;
+    controle++;
   }
 
 
