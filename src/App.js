@@ -35,23 +35,21 @@ function App() {
 
   return (
     <div>
-      <h1>Túdo.vapp</h1>
+      <h1>2do.vapp</h1>
         <div name="search">
           <input onKeyDown={(ev) => {
-    console.log(`Pressed keyCode ${ev.key}`);
-    if (ev.key === 'Enter') {
-      addTodo(input)
-      ev.preventDefault();
-    }
-  }}type="" id="ipt" placeholder='O quê eu ia fazer mesmo?' value={input} onChange={(e) => setInput(e.target.value)} />
-          <button className='btn-add' onClick={() => addTodo(input)}>+</button>
+                if (ev.key === 'Enter') {
+                  addTodo(input)
+                  ev.preventDefault();
+                }
+              }} placeholder='O quê eu ia fazer mesmo?' value={input} onChange={(e) => setInput(e.target.value)} />
       </div>
       <div class="container">
         {list.map((todo) => (
           <div class="item" value={todo.id}>
             <tr>
             <th><button class="btn-ok" onClick={() => concluiTodo(todo.id)}></button></th>
-            <td class="todo-text"><li key={todo.id}>{todo.todo}</li></td>
+            <td contentEditable="true" class="todo-text"><li key={todo.id}>{todo.todo}</li></td>
             <td><button class="btn-remove" onClick={() => deleteTodo(todo.id)}>&times;</button></td>
             </tr>
           </div>
