@@ -30,6 +30,7 @@ function App() {
 
   const concluiTodo = (id, todo) =>{
     document.querySelectorAll("[value="+ CSS.escape(id)+"]")[0].classList.toggle("feito")
+    document.querySelectorAll("[value="+ CSS.escape(id)+"]")[0].querySelectorAll('button')[0].classList.toggle("check")
   }
 
   return (

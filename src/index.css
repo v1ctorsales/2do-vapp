@@ -56,6 +56,10 @@ border-radius: 25px;
   border-radius: 0 0 25PX 25px;
 }
 
+.item:only-child{
+  border-radius: 25PX 25PX 25PX 25px;
+}
+
 .item{
   display: inline-flex;
   justify-items: center;
@@ -94,6 +98,13 @@ input:focus::placeholder {
   margin-left:10px;
   height: 20px;
   width: 80%;
+}
+
+.check{
+  background: url('https://images.vexels.com/media/users/3/157932/isolated/lists/951a617272553f49e75548e212ed947f-curved-check-mark-icon.png');
+  background-repeat: no-repeat;
+  background-size: 15px 15px;
+  background-position-x: 2px;
 }
 
 .none{
