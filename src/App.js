@@ -33,27 +33,9 @@ function App() {
   }
   const concluiTodo = (id, todo) =>{
 
-    alert(id);
-
-<<<<<<< HEAD
     document.querySelectorAll("[value="+ CSS.escape(id)+"]")[0].classList.add("feito");
 
 
-=======
-    var newitem = list.filter(id)
-    if(newitem){
-      document.querySelectorAll(".item2")[0].classList.add("visivel");
-    }
-    document.querySelectorAll(".item2")[id].classList.add("visivel");
-    //var newid = id +1;
-    //console.log(id)
-    //const concList = oklist.filter((todo) => todo.id > 1);
-    //setList(concList);
-
-    //setInput("");
-
-    controle++;
->>>>>>> 8f7bc4bbda8165193d3ab897943e881db0958352
   }
   return (
     <div>
@@ -80,11 +62,7 @@ function App() {
 
         
   )
-
-
-  
+ 
 }
-
-
 
 export default App 
