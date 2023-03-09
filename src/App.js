@@ -5,17 +5,20 @@ import React, {useState} from 'react'
 function App() {
 
 
-  const [list, setList, , oklist , setListOk] = useState([]);
+  const [list, setList,] = useState([]);
+  const [list2, setList2,] = useState([]);
   const [input, setInput] = useState("");
 
   const addTodo = (todo)=> {  
     
 
-    const newTodo = {
+    var newTodo = {
       id: Math.random(),
       todo: todo,
     };
+    setList2([...list2, newTodo])
     setList([...list, newTodo])
+
 
     setInput("");
 
@@ -26,36 +29,16 @@ function App() {
 
     const newList = list.filter((todo) => todo.id !== id);
     setList(newList);
+
   }
   const concluiTodo = (id, todo) =>{
 
     alert(id);
 
-    var newitem = list.filter(id)
-    if(newitem){
-      document.querySelectorAll(".item2")[0].classList.add("visivel");
-    }
-    document.querySelectorAll(".item2")[id].classList.add("visivel");
-    //var newid = id +1;
-    //console.log(id)
-
-   // id.deleteTodo();
+    document.querySelectorAll("[value="+ CSS.escape(id)+"]")[0].classList.add("feito");
 
 
-    //const concList = oklist.filter((todo) => todo.id > 1);
-    //setList(concList);
-
-    //setInput("");
-
-    controle++;
   }
-
-
-
-const bazuka = () =>{
-
-
-}
   return (
     <div>
       <h1>Túdo.vapp</h1>
@@ -65,7 +48,7 @@ const bazuka = () =>{
       </div>
       <div class="container">
         {list.map((todo) => (
-          <div class="item">
+          <div class="item" value={todo.id}>
             <tr>
             <th><button class="btn-ok" onClick={() => concluiTodo(todo.id)}></button></th>
             <td class="todo-text"><li key={todo.id}>{todo.todo}</li></td>
@@ -73,17 +56,6 @@ const bazuka = () =>{
             </tr>
           </div>
         ))}
-      </div>
-      <div class="container2" id="ctn2">
-      {list.map((todo) => ( 
-      <div class="item2">
-        <tr>
-        <th><button class="none"></button></th>
-        <td class="todo-text"><li key={todo.newid}>{todo.todo}</li></td>
-        <td><button class="btn-remove" onClick={() => deleteTodo(todo.id)}>&times;</button></td>
-        </tr>
-      </div>
-      ))}
       </div>
       
       <script>

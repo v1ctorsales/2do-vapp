@@ -41,8 +41,8 @@ border-radius: 25px;
   display: none;
 }
 
-.visivel{
-  display: grid;
+.feito{
+  background-color: rgb(66, 185, 66);
 }
 
 .item:nth-child(even) {
