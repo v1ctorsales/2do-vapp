@@ -37,7 +37,13 @@ function App() {
     <div>
       <h1>Túdo.vapp</h1>
         <div name="search">
-          <input type="" id="ipt" placeholder='O quê eu ia fazer mesmo?' value={input} onChange={(e) => setInput(e.target.value)} />
+          <input onKeyDown={(ev) => {
+    console.log(`Pressed keyCode ${ev.key}`);
+    if (ev.key === 'Enter') {
+      addTodo(input)
+      ev.preventDefault();
+    }
+  }}type="" id="ipt" placeholder='O quê eu ia fazer mesmo?' value={input} onChange={(e) => setInput(e.target.value)} />
           <button className='btn-add' onClick={() => addTodo(input)}>+</button>
       </div>
       <div class="container">
