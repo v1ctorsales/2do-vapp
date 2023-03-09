@@ -38,10 +38,6 @@ function App() {
     document.querySelectorAll(".item2")[id].classList.add("visivel");
     //var newid = id +1;
     //console.log(id)
-
-   // id.deleteTodo();
-
-
     //const concList = oklist.filter((todo) => todo.id > 1);
     //setList(concList);
 
