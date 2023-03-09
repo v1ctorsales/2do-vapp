@@ -1,47 +1,42 @@
 import React, {useState} from 'react'
 
-  var controle = 0;
 
 function App() {
 
-
   const [list, setList,] = useState([]);
-  const [list2, setList2,] = useState([]);
   const [input, setInput] = useState("");
 
   const addTodo = (todo)=> {  
-    
-
+  
     var newTodo = {
       id: Math.random(),
       todo: todo,
     };
-    setList2([...list2, newTodo])
-    setList([...list, newTodo])
 
+    if(todo!=""){
+      setList([...list, newTodo])
+    }
+    else{
+      alert("Sua tarefa está vazia!")
+    }
 
     setInput("");
-
-    controle++;
   };
 
   const deleteTodo = (id) =>{
-
     const newList = list.filter((todo) => todo.id !== id);
     setList(newList);
-
   }
+
   const concluiTodo = (id, todo) =>{
-
-    document.querySelectorAll("[value="+ CSS.escape(id)+"]")[0].classList.add("feito");
-
-
+    document.querySelectorAll("[value="+ CSS.escape(id)+"]")[0].classList.toggle("feito")
   }
+
   return (
     <div>
       <h1>Túdo.vapp</h1>
         <div name="search">
-          <input type="" placeholder='O quê eu ia fazer mesmo?' value={input} onChange={(e) => setInput(e.target.value)} />
+          <input type="" id="ipt" placeholder='O quê eu ia fazer mesmo?' value={input} onChange={(e) => setInput(e.target.value)} />
           <button className='btn-add' onClick={() => addTodo(input)}>+</button>
       </div>
       <div class="container">
@@ -57,11 +52,14 @@ function App() {
       </div>
       
       <script>
+        
       </script>
-      </div>// Preciso criar uma lista secundaria para os items concluidos
+      </div>// Preciso linkar o enter pra enviar o todo.
 
         
   )
+  
+  
  
 }
 
