@@ -3,6 +3,7 @@ import React, {useState} from 'react'
 
 function App() {
 
+
   const [list, setList,] = useState([]);
   const [input, setInput] = useState("");
 
@@ -35,14 +36,22 @@ function App() {
 
   return (
     <div>
-      <h1>2do.vapp</h1>
+      <h1>2do</h1>
         <div name="search">
           <input onKeyDown={(ev) => {
                 if (ev.key === 'Enter') {
                   addTodo(input)
                   ev.preventDefault();
                 }
-              }} placeholder='O quê eu ia fazer mesmo?' value={input} onChange={(e) => setInput(e.target.value)} />
+              }}contentEditable="true" placeholder='O quê eu ia fazer mesmo?' value={input} onChange={(e) => setInput(e.target.value)} />
+
+            <input class="mobile" onKeyDown={(ev) => {
+                if (ev.key === 'Enter') {
+                  addTodo(input)
+                  ev.preventDefault();
+                }
+              }} placeholder='...' value={input} onChange={(e) => setInput(e.target.value)} />
+
       </div>
       <div class="container">
         {list.map((todo) => (
@@ -57,7 +66,8 @@ function App() {
       </div>
       
       <script>
-        
+
+
       </script>
       </div>// Preciso linkar o enter pra enviar o todo.
 
