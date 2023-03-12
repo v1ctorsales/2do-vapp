@@ -17,35 +17,29 @@ li{
 h1{
   color: rgb(100, 100, 100);
 }
-
 tr, td{
   width: 99%;
 }
-
 td, th {
   padding: 5px;
 }
-
 .concluido{
   background-color: red;
   color: red;
   font-size: 200px;
 }
-
 .container{
 display: grid;
 margin: 20px auto;
 width: 50%;
 border-radius: 25px;
 }
-
 .item:nth-child(even) {
   background-color: #e9e9e9; 
 }
 .item:nth-child(odd) {
   background-color: rgb(243, 243, 243);
 }
-
 .item:first-child{
   border-radius:25PX 25px 0 0 ;
 }
@@ -53,36 +47,29 @@ border-radius: 25px;
 .item:last-child{
   border-radius: 0 0 25PX 25px;
 }
-
 .item:only-child{
   border-radius: 25PX 25PX 25PX 25px;
 }
-
 .item{
   display: inline-flex;
   justify-items: center;
 }
-
 ::placeholder{
   color: rgb(131, 131, 131);
   text-align: center;
 }
-
 input:focus::placeholder {
   color: transparent;
 }
-
 .btn-remove{
   background-color: rgb(245, 153, 153);
   border-radius: 25px;
   border: 1px solid rgb(148, 11, 11);
   color: white;
 }
-
 .btn-remove:hover{
   background-color: rgb(233, 101, 101);
 }
-
 .btn-add{
   border-radius: 50px;
   background-color: white;
@@ -100,14 +87,12 @@ input:focus::placeholder {
 .btn-ok:hover{
   background-color: rgb(69, 102, 74);
 }
-
 .check{
   background: url('https://images.vexels.com/media/users/3/157932/isolated/lists/951a617272553f49e75548e212ed947f-curved-check-mark-icon.png');
   background-repeat: no-repeat;
   background-size: 15px 15px;
   background-position-x: 2px;
 }
-
 .none{
   border-radius: 50px;
   border: 2px solid rgba(255, 255, 255, 0);
@@ -116,7 +101,6 @@ input:focus::placeholder {
   height: 20px;
   width: 80%;
 }
-
 input{
   border: 2px solid rgb(5, 182, 5);
   border-radius: 25px;
@@ -126,11 +110,9 @@ input{
   background-color: transparent;
   font-size: 18px;
 }
-
 input.mobile{
   display: none;
 }
-
 @media (max-width:1150px) {
   input{
     font-size: 14px;
@@ -151,27 +133,22 @@ input.mobile{
     font-size: 12px;
     display: inline;
   }
-
   input{
     display: none;
   }
 }
-
 .pvw-title span {
   display: none;
 }
 .pvw-title:after {
   content: 'whatever it is you want to add';
 }
-
 textarea:focus, input:focus{
   outline: none
 }
-
 textarea{
   text-align: center;
 }
-
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
