@@ -27,12 +27,14 @@ function App() {
   };
 
   const deleteTodo = (id) =>{
+    
     const newList = list.filter((todo) => todo.id !== id);
     setList(newList);
 
   }
 
   const concluiTodo = (id, todo) =>{
+
     document.querySelectorAll("[value="+ CSS.escape(id)+"]")[0].classList.toggle("feito")
     document.querySelectorAll("[value="+ CSS.escape(id)+"]")[0].querySelectorAll('button')[0].classList.toggle("check")
 
@@ -64,7 +66,9 @@ function App() {
               placeholder='...' value={input} onChange={(e) => setInput(e.target.value)} />
 
       </div>
+
       <div class="container">
+
         {list.map((todo) => (
 
           <div class="item" value={todo.id}>
@@ -74,7 +78,7 @@ function App() {
             <td><button class="btn-remove" onClick={() => deleteTodo(todo.id)}>&times;</button></td>
             </tr>
           </div>
-          
+
         ))
         }
 
