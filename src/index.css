@@ -46,7 +46,6 @@ border-radius: 25px;
   background-color: rgb(243, 243, 243);
 }
 
-
 .item:first-child{
   border-radius:25PX 25px 0 0 ;
 }
@@ -98,6 +97,9 @@ input:focus::placeholder {
   height: 20px;
   width: 80%;
 }
+.btn-ok:hover{
+  background-color: rgb(69, 102, 74);
+}
 
 .check{
   background: url('https://images.vexels.com/media/users/3/157932/isolated/lists/951a617272553f49e75548e212ed947f-curved-check-mark-icon.png');
@@ -134,13 +136,11 @@ input.mobile{
     font-size: 14px;
   }
 }
-
 @media (max-width:900px) {
   input{
     font-size: 12px;
   }
 }
-
 @media (max-width:705px) {
   input{
     font-size: 10px;
@@ -176,7 +176,6 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-
 footer{
   width: 100%;
   height: 25px;

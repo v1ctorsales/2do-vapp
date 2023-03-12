@@ -35,6 +35,7 @@ function App() {
   }
 
   return (
+    
     <div>
       <h1>2do</h1>
         <div name="search">
@@ -43,14 +44,20 @@ function App() {
                   addTodo(input)
                   ev.preventDefault();
                 }
-              }}contentEditable="true" placeholder='O quê eu ia fazer mesmo?' value={input} onChange={(e) => setInput(e.target.value)} />
+              }}
+              
+              contentEditable="true" placeholder='O quê eu ia fazer mesmo?' value={input} onChange={(e) => setInput(e.target.value)} />
 
             <input class="mobile" onKeyDown={(ev) => {
+
                 if (ev.key === 'Enter') {
                   addTodo(input)
                   ev.preventDefault();
                 }
-              }} placeholder='...' value={input} onChange={(e) => setInput(e.target.value)} />
+
+              }}
+              
+              placeholder='...' value={input} onChange={(e) => setInput(e.target.value)} />
 
       </div>
       <div class="container">
@@ -62,14 +69,12 @@ function App() {
             <td><button class="btn-remove" onClick={() => deleteTodo(todo.id)}>&times;</button></td>
             </tr>
           </div>
-        ))}
+        ))
+        }
+
       </div>
       
-      <script>
-
-
-      </script>
-      </div>// Preciso linkar o enter pra enviar o todo.
+      </div>// Enter linkado para enviar o todo.
 
         
   )
