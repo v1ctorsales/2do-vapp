@@ -17,25 +17,29 @@ function App() {
     if(todo!=""){
       setList([...list, newTodo])
     }
+
     else{
       alert("Sua tarefa está vazia!")
     }
 
     setInput("");
+
   };
 
   const deleteTodo = (id) =>{
     const newList = list.filter((todo) => todo.id !== id);
     setList(newList);
+
   }
 
   const concluiTodo = (id, todo) =>{
     document.querySelectorAll("[value="+ CSS.escape(id)+"]")[0].classList.toggle("feito")
     document.querySelectorAll("[value="+ CSS.escape(id)+"]")[0].querySelectorAll('button')[0].classList.toggle("check")
+
   }
 
   return (
-    
+
     <div>
       <h1>2do</h1>
         <div name="search">
@@ -62,6 +66,7 @@ function App() {
       </div>
       <div class="container">
         {list.map((todo) => (
+
           <div class="item" value={todo.id}>
             <tr>
             <th><button class="btn-ok" onClick={() => concluiTodo(todo.id)}></button></th>
@@ -69,6 +74,7 @@ function App() {
             <td><button class="btn-remove" onClick={() => deleteTodo(todo.id)}>&times;</button></td>
             </tr>
           </div>
+          
         ))
         }
 
@@ -84,3 +90,7 @@ function App() {
 }
 
 export default App 
+
+//verificar se o 'contentEditable="true"' é a melhor solução...
+
+//talvez adicionar a funçao de mover os to-dos dps.
